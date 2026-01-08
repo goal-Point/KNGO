@@ -1,17 +1,28 @@
-import Header from "./components/Header";
+import Link from "next/link";
 
-export const metadata = {
-  title: "KNGO",
-  description: "Skill-based football competitions",
-};
-
-export default function RootLayout({ children }) {
+export default function Home() {
   return (
-    <html lang="en">
-      <body style={{ margin: 0, fontFamily: "Arial, sans-serif" }}>
-        <Header />
-        {children}
-      </body>
-    </html>
+    <main style={{ padding: "60px 40px", maxWidth: "1200px", margin: "0 auto" }}>
+      <section style={{ marginBottom: "80px" }}>
+        <h1 style={{ fontSize: "56px", marginBottom: "20px" }}>
+          KNGO
+        </h1>
+        <p style={{ fontSize: "20px", maxWidth: "600px" }}>
+          Skill-based football competitions.  
+          Predict the moment. Closest wins.
+        </p>
+
+        <Link href="/competitions">
+          <button style={{
+            marginTop: "30px",
+            padding: "14px 28px",
+            fontSize: "16px",
+            cursor: "pointer"
+          }}>
+            View Competitions
+          </button>
+        </Link>
+      </section>
+    </main>
   );
 }
