@@ -1,14 +1,12 @@
-export const metadata = {
-  title: "STRIKEPOINT",
-  description: "Predict the point of impact"
-};
-
-export default function RootLayout({ children }) {
+export default function Home() {
   return (
-    <html lang="en">
-      <body style={{ margin: 0, fontFamily: "Arial, sans-serif" }}>
-        {children}
-      </body>
-    </html>
+    <main style={{ padding: "40px" }}>
+      <h1>KNGO</h1>
+      <p>Skill-based football competitions</p>
+
+      <p style={{ marginTop: "20px", color: "green" }}>
+        ✅ Website is now working correctly
+      </p>
+    </main>
   );
 }
