@@ -1,30 +1,72 @@
-import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
   return (
-    <main style={{ padding: "60px 40px", maxWidth: "1200px", margin: "0 auto" }}>
-      <h1 style={{ fontSize: "56px", marginBottom: "20px" }}>
-        KNGO
-      </h1>
+    <main
+      style={{
+        minHeight: "100vh",
+        backgroundColor: "#0b0b0b",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        textAlign: "center",
+        padding: "40px 20px",
+      }}
+    >
+      <div style={{ maxWidth: "600px" }}>
+        {/* LOGO */}
+        <div style={{ marginBottom: "30px" }}>
+          <Image
+            src="/kngo-logo.png"
+            alt="KNGO Logo"
+            width={260}
+            height={260}
+            priority
+          />
+        </div>
 
-      <p style={{ fontSize: "20px", maxWidth: "600px" }}>
-        Skill-based football competitions.
-        <br />
-        Predict the moment. Closest wins.
-      </p>
+        {/* HEADLINE */}
+        <h1
+          style={{
+            fontSize: "42px",
+            fontWeight: "800",
+            color: "#ffffff",
+            marginBottom: "16px",
+          }}
+        >
+          WIN BIG WITH SKILL
+        </h1>
 
-      <Link href="/competitions">
+        {/* SUBTEXT */}
+        <p
+          style={{
+            color: "#b5b5b5",
+            fontSize: "18px",
+            lineHeight: "1.5",
+            marginBottom: "32px",
+          }}
+        >
+          Skill-based football competitions.
+          <br />
+          Closest entry wins.
+        </p>
+
+        {/* BUTTON */}
         <button
           style={{
-            marginTop: "30px",
-            padding: "14px 28px",
+            backgroundColor: "#22c55e",
+            color: "#000",
+            padding: "14px 32px",
             fontSize: "16px",
+            fontWeight: "700",
+            borderRadius: "10px",
+            border: "none",
             cursor: "pointer",
           }}
         >
-          View Competitions
+          ENTER LIVE COMPETITION
         </button>
-      </Link>
+      </div>
     </main>
   );
 }
