@@ -59,3 +59,22 @@ export default function Home() {
 
               <p className="text-zinc-400 mb-4">
                 Skill-based football competition
+              </p>
+
+              <p className="text-green-400 text-xl font-semibold mb-6">
+                €2.99 per entry
+              </p>
+
+              <button className="bg-green-500 text-black font-bold px-8 py-4 rounded-xl hover:bg-green-400 transition">
+                ENTER NOW
+              </button>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+    </main>
+  );
+}
+
